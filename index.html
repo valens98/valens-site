@@ -1,186 +1,433 @@
 <!DOCTYPE html>
-<html lang="it">
+<html lang="it" prefix="og: https://ogp.me/ns#">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Portfolio professionale di Daniele Valenti - Cybersecurity Engineer & Computer Science Specialist">
-    <title>Daniele Valenti - Cybersecurity Engineer</title>
-    
-    <!-- Bootstrap CSS -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
-    
-    <!-- Font Awesome -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    
-    <!-- Custom CSS -->
-    <link rel="stylesheet" href="styles.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- ══════════════════════════════════════════
+       SEO — PRIMARY
+  ══════════════════════════════════════════ -->
+  <title>Daniele Valenti — Cybersecurity Engineer & AI Researcher | Roma</title>
+  <meta name="description" content="Daniele Valenti, Cybersecurity Engineer e ricercatore in Intelligenza Artificiale. MSc Computer Science & AI alla Sapienza. Specializzato in crittografia, ZKP, machine learning e sicurezza informatica.">
+  <meta name="keywords" content="Daniele Valenti, Cybersecurity Engineer, AI Researcher, Machine Learning, Crittografia, Zero Knowledge Proof, Sapienza Roma, CTF, Python, Security">
+  <meta name="author" content="Daniele Valenti">
+  <meta name="robots" content="index, follow">
+  <link rel="canonical" href="https://valens98.github.io/valens-site/">
+
+  <!-- ══════════════════════════════════════════
+       SEO — OPEN GRAPH (LinkedIn, Facebook)
+  ══════════════════════════════════════════ -->
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://valens98.github.io/valens-site/">
+  <meta property="og:title" content="Daniele Valenti — Cybersecurity & AI">
+  <meta property="og:description" content="Cybersecurity Engineer e ricercatore in AI. Specializzato in crittografia avanzata, ZKP, machine learning. MSc CS & AI — Sapienza Roma.">
+  <meta property="og:image" content="https://valens98.github.io/valens-site/assets/og-image.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:locale" content="it_IT">
+  <meta property="og:site_name" content="Daniele Valenti Portfolio">
+
+  <!-- ══════════════════════════════════════════
+       SEO — TWITTER CARD
+  ══════════════════════════════════════════ -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Daniele Valenti — Cybersecurity & AI">
+  <meta name="twitter:description" content="Cybersecurity Engineer & AI Researcher. MSc CS & AI — Sapienza Roma.">
+  <meta name="twitter:image" content="https://valens98.github.io/valens-site/assets/og-image.png">
+
+  <!-- ══════════════════════════════════════════
+       SEO — STRUCTURED DATA (JSON-LD)
+  ══════════════════════════════════════════ -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Person",
+    "name": "Daniele Valenti",
+    "jobTitle": "Cybersecurity Engineer & AI Researcher",
+    "url": "https://valens98.github.io/valens-site/",
+    "sameAs": [
+      "https://github.com/valens98",
+      "https://www.linkedin.com/in/daniele-valenti"
+    ],
+    "address": {
+      "@type": "PostalAddress",
+      "addressLocality": "Roma",
+      "addressCountry": "IT"
+    },
+    "alumniOf": [
+      {
+        "@type": "CollegeOrUniversity",
+        "name": "Sapienza Università di Roma"
+      },
+      {
+        "@type": "CollegeOrUniversity",
+        "name": "Politecnico di Milano"
+      }
+    ],
+    "knowsAbout": [
+      "Cybersecurity", "Artificial Intelligence", "Cryptography",
+      "Zero-Knowledge Proofs", "Machine Learning", "Python", "CTF"
+    ],
+    "email": "danielevalenti06081998@gmail.com"
+  }
+  </script>
+
+  <!-- ══════════════════════════════════════════
+       PERFORMANCE — PRECONNECT & PRELOAD
+  ══════════════════════════════════════════ -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Share+Tech+Mono&family=Orbitron:wght@400;700;900&family=Rajdhani:wght@300;400;600&display=swap">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Share+Tech+Mono&family=Orbitron:wght@400;700;900&family=Rajdhani:wght@300;400;600&display=swap">
+
+  <!-- FAVICON (placeholder, sostituisci con il tuo) -->
+  <link rel="icon" type="image/svg+xml" href="assets/favicon.svg">
+
+  <!-- CSS -->
+  <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-    <!-- Navigation -->
-    <nav class="navbar navbar-expand-lg navbar-dark fixed-top">
-        <div class="container">
-            <a class="navbar-brand" href="#home">Daniele Valenti</a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse" id="navbarNav">
-                <ul class="navbar-nav ms-auto">
-                    <li class="nav-item"><a class="nav-link" href="#about">Chi Sono</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#skills">Competenze</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#projects">Progetti</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#experience">Esperienza</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#education">Formazione</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#contact">Contatti</a></li>
-                </ul>
-            </div>
-        </div>
+
+  <!-- SKIP TO CONTENT (accessibilità) -->
+  <a href="#main" class="skip-link">Salta al contenuto principale</a>
+
+  <!-- CURSOR -->
+  <div class="cursor" id="cursor" aria-hidden="true"></div>
+  <div class="cursor-ring" id="cursorRing" aria-hidden="true"></div>
+
+  <!-- BACKGROUND -->
+  <canvas id="neural-canvas" aria-hidden="true"></canvas>
+
+  <!-- ══════════════ NAVBAR ══════════════ -->
+  <header role="banner">
+    <nav aria-label="Navigazione principale">
+      <a href="#home" class="nav-logo" aria-label="Daniele Valenti — Home">DV.exe</a>
+      <button class="nav-toggle" aria-label="Apri menu" aria-expanded="false" aria-controls="nav-menu">
+        <span></span><span></span><span></span>
+      </button>
+      <ul class="nav-links" id="nav-menu" role="list">
+        <li><a href="#about">About</a></li>
+        <li><a href="#skills">Skills</a></li>
+        <li><a href="#projects">Progetti</a></li>
+        <li><a href="#resources">Risorse</a></li>
+        <li><a href="#experience">Percorso</a></li>
+        <li><a href="#playground">AI Lab</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
     </nav>
+  </header>
 
-    <!-- Hero Section -->
-    <section id="home" class="hero-section">
-        <div class="container">
-            <div class="row align-items-center">
-                <div class="col-lg-8 mx-auto text-center">
-                    <h1 class="display-3 fw-bold mb-3">Daniele Valenti</h1>
-                    <p class="lead mb-4">Cybersecurity Engineer & Computer Science Specialist</p>
-                    <div class="badges mb-4">
-                        <span class="badge-custom">MSc Computer Science & AI - Sapienza</span>
-                        <span class="badge-custom">BSc Ingegneria Informatica - Sapienza</span>
-                    </div>
-                    <div class="hero-buttons">
-                        <a href="#projects" class="btn btn-primary btn-lg me-3">Visualizza Progetti</a>
-                        <a href="#contact" class="btn btn-outline-light btn-lg">Contattami</a>
-                    </div>
-                </div>
-            </div>
+  <!-- ══════════════ MAIN ══════════════ -->
+  <main id="main">
+
+    <!-- HERO -->
+    <section id="home" aria-label="Introduzione">
+      <div class="hero-content">
+        <div class="hero-tag" aria-hidden="true">cybersecurity · ai · research</div>
+        <h1 class="hero-name">
+          <span class="first">DANIELE </span><span class="last glitch" data-text="VALENTI">VALENTI</span>
+        </h1>
+        <p class="hero-typing" aria-live="polite">
+          <span id="typing-text"></span><span class="cursor-blink" aria-hidden="true"></span>
+        </p>
+        <ul class="hero-badges" aria-label="Titoli di studio">
+          <li class="badge">MSc CS & AI — Sapienza</li>
+          <li class="badge">BSc Ing. Informatica</li>
+          <li class="badge">Cryptography</li>
+          <li class="badge">Machine Learning</li>
+        </ul>
+        <div class="hero-ctas">
+          <a href="#projects" class="btn">Visualizza Progetti</a>
+          <a href="#playground" class="btn btn-ghost">AI Lab →</a>
         </div>
+      </div>
+      <div class="hero-scroll" aria-hidden="true">
+        <div class="scroll-line"></div>
+        <span>scroll</span>
+      </div>
     </section>
 
-    <!-- About Section -->
-    <section id="about" class="section-padding">
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-10 mx-auto">
-                    <h2 class="section-title">Chi Sono</h2>
-                    <div class="section-content">
-                        <p class="lead">
-                            Studente magistrale in Computer Science & Artificial Intelligence alla Sapienza con una forte passione 
-                            per la sicurezza informatica, la crittografia e l'intelligenza artificiale. Ho completato la laurea 
-                            triennale in Ingegneria Informatica alla Sapienza con una tesi sul sistema APHRODITE per la Stazione 
-                            Spaziale Internazionale.
-                        </p>
-                        <p>
-                            Il mio percorso accademico è iniziato al Politecnico di Milano (2018-2022) dove ho maturato le prime 
-                            competenze tecniche, per poi proseguire alla Sapienza dove mi sono specializzato ulteriormente. 
-                            Attualmente esploro tematiche avanzate di cybersecurity, machine learning, e sistemi complessi, 
-                            con progetti di ricerca in ambito crittografico e intelligenza artificiale applicata al trading.
-                        </p>
-                        <p>
-                            Il mio approccio combina solide basi teoriche acquisite durante il Liceo Classico Chris Cappell College 
-                            e il programma Digital Engineering dell'ELIS College, con esperienza pratica nello sviluppo software, 
-                            ricerca accademica e collaborazioni con realtà come Cisco, Eni e la Sapienza.
-                        </p>
-                    </div>
-                </div>
-            </div>
+    <!-- ABOUT -->
+    <section id="about" aria-labelledby="about-heading">
+      <div class="container">
+        <div class="section-header reveal">
+          <span class="section-tag" aria-hidden="true">// 01. chi sono</span>
+          <h2 id="about-heading" class="section-title">About <span>me</span></h2>
+          <div class="section-line" aria-hidden="true"></div>
         </div>
+        <div class="about-grid">
+          <div class="about-visual reveal">
+            <div class="about-hex" aria-hidden="true">🧠</div>
+            <dl class="about-stats">
+              <div class="stat-box">
+                <dt class="stat-label">Anni studio</dt>
+                <dd class="stat-num" data-target="5">0</dd>
+              </div>
+              <div class="stat-box">
+                <dt class="stat-label">Progetti</dt>
+                <dd class="stat-num" data-target="10">0</dd>
+              </div>
+              <div class="stat-box">
+                <dt class="stat-label">Collaborazioni</dt>
+                <dd class="stat-num" data-target="3">0</dd>
+              </div>
+              <div class="stat-box">
+                <dt class="stat-label">Lauree</dt>
+                <dd class="stat-num" data-target="2">0</dd>
+              </div>
+            </dl>
+          </div>
+          <div class="about-text reveal">
+            <p>Sono un <strong>Cybersecurity Engineer</strong> e ricercatore in <strong>AI</strong>, attualmente studente magistrale in <em>Computer Science & Artificial Intelligence</em> alla Sapienza di Roma.</p>
+            <p>La mia tesi triennale si è focalizzata su <strong>APHRODITE</strong>, un sistema critico per la Stazione Spaziale Internazionale — un progetto che mi ha insegnato cosa significa scrivere software quando gli errori non sono un'opzione.</p>
+            <p>Oggi esploro la frontiera tra <strong>crittografia avanzata</strong>, machine learning e cybersecurity applicata, con un occhio sempre puntato verso l'AI generativa e il suo impatto sulla sicurezza dei sistemi.</p>
+            <ul class="about-collab" aria-label="Collaborazioni">
+              <li class="collab-tag">🔒 Cisco</li>
+              <li class="collab-tag">⚡ Eni</li>
+              <li class="collab-tag">🏛️ Sapienza</li>
+              <li class="collab-tag">🚀 ISS APHRODITE</li>
+            </ul>
+          </div>
+        </div>
+      </div>
     </section>
 
-    <!-- Skills Section -->
-    <section id="skills" class="section-padding bg-light">
-        <div class="container">
-            <h2 class="section-title text-center">Competenze Tecniche</h2>
-            <div class="row g-4" id="skills-container">
-                <!-- Skills will be loaded dynamically via JavaScript -->
-            </div>
+    <!-- SKILLS -->
+    <section id="skills" aria-labelledby="skills-heading">
+      <div class="container">
+        <div class="section-header reveal">
+          <span class="section-tag" aria-hidden="true">// 02. competenze</span>
+          <h2 id="skills-heading" class="section-title">Tech <span>Stack</span></h2>
+          <div class="section-line" aria-hidden="true"></div>
         </div>
+        <div class="skills-grid">
+          <div class="reveal">
+            <canvas id="radar-canvas" width="420" height="420" role="img" aria-label="Radar chart delle competenze tecniche"></canvas>
+          </div>
+          <div class="reveal">
+            <div class="skills-list" id="skills-bars" role="list" aria-label="Livello di padronanza per tecnologia"></div>
+            <div class="skills-tags" id="skills-tags" aria-label="Tecnologie conosciute"></div>
+          </div>
+        </div>
+      </div>
     </section>
 
-    <!-- Projects Section -->
-    <section id="projects" class="section-padding">
-        <div class="container">
-            <h2 class="section-title text-center">Progetti Principali</h2>
-            <div class="row">
-                <div class="col-lg-10 mx-auto">
-                    <div class="filter-buttons mb-4 text-center">
-                        <button class="btn btn-filter active" data-filter="all">Tutti</button>
-                        <button class="btn btn-filter" data-filter="cybersecurity">Cybersecurity</button>
-                        <button class="btn btn-filter" data-filter="ml">Machine Learning</button>
-                        <button class="btn btn-filter" data-filter="software">Software</button>
-                    </div>
-                    <div class="row g-4" id="projects-container">
-                        <!-- Projects will be loaded dynamically via JavaScript -->
-                    </div>
-                </div>
-            </div>
+    <!-- PROJECTS -->
+    <section id="projects" aria-labelledby="projects-heading">
+      <div class="container">
+        <div class="section-header reveal">
+          <span class="section-tag" aria-hidden="true">// 03. progetti</span>
+          <h2 id="projects-heading" class="section-title">Progetti <span>Principali</span></h2>
+          <div class="section-line" aria-hidden="true"></div>
         </div>
+        <div class="projects-filter reveal" role="group" aria-label="Filtra per categoria" id="filter-btns">
+          <button class="filter-btn active" data-filter="all" aria-pressed="true">All</button>
+          <button class="filter-btn" data-filter="cybersec" aria-pressed="false">Cybersecurity</button>
+          <button class="filter-btn" data-filter="ml" aria-pressed="false">Machine Learning</button>
+          <button class="filter-btn" data-filter="software" aria-pressed="false">Software</button>
+        </div>
+        <div class="projects-grid" id="projects-grid" role="list"></div>
+      </div>
     </section>
 
-    <!-- Experience Section -->
-    <section id="experience" class="section-padding bg-light">
-        <div class="container">
-            <h2 class="section-title text-center">Esperienza Professionale</h2>
-            <div class="row">
-                <div class="col-lg-8 mx-auto">
-                    <div class="timeline" id="experience-timeline">
-                        <!-- Timeline will be loaded dynamically via JavaScript -->
-                    </div>
-                </div>
-            </div>
+    <!-- RESOURCES -->
+    <section id="resources" aria-labelledby="resources-heading">
+      <div class="container">
+        <div class="section-header reveal">
+          <span class="section-tag" aria-hidden="true">// 04. risorse</span>
+          <h2 id="resources-heading" class="section-title">Appunti & <span>Materiali</span></h2>
+          <div class="section-line" aria-hidden="true"></div>
         </div>
+        <div class="reveal">
+          <div class="resources-tabs" role="tablist" aria-label="Categoria materiali">
+            <button class="tab-btn active" data-tab="all" role="tab" aria-selected="true">Tutti</button>
+            <button class="tab-btn" data-tab="notes" role="tab" aria-selected="false">Appunti</button>
+            <button class="tab-btn" data-tab="code" role="tab" aria-selected="false">Codice</button>
+            <button class="tab-btn" data-tab="research" role="tab" aria-selected="false">Ricerca</button>
+          </div>
+          <div class="resources-search">
+            <span class="search-icon" aria-hidden="true">⌕</span>
+            <label for="resource-search" class="sr-only">Cerca materiali</label>
+            <input type="search" id="resource-search" placeholder="Cerca appunti, corsi, argomenti..." autocomplete="off">
+          </div>
+          <div class="resources-grid" id="resources-grid" role="list"></div>
+        </div>
+      </div>
     </section>
 
-    <!-- Education Section -->
-    <section id="education" class="section-padding">
-        <div class="container">
-            <h2 class="section-title text-center">Formazione Accademica</h2>
-            <div class="row">
-                <div class="col-lg-8 mx-auto">
-                    <div class="timeline" id="education-timeline">
-                        <!-- Timeline will be loaded dynamically via JavaScript -->
-                    </div>
-                </div>
-            </div>
+    <!-- EXPERIENCE & EDUCATION -->
+    <section id="experience" aria-labelledby="experience-heading">
+      <div class="container">
+        <div class="section-header reveal">
+          <span class="section-tag" aria-hidden="true">// 05. esperienza & formazione</span>
+          <h2 id="experience-heading" class="section-title">Il mio <span>Percorso</span></h2>
+          <div class="section-line" aria-hidden="true"></div>
         </div>
+        <div class="timeline-grid">
+          <div>
+            <h3 class="timeline-col-title" style="color:var(--neon)">ESPERIENZA</h3>
+            <ol class="timeline reveal" aria-label="Esperienza professionale">
+              <li class="timeline-item">
+                <time class="timeline-date" datetime="2023">2023 — Presente</time>
+                <div class="timeline-role">AI & Cybersecurity Researcher</div>
+                <div class="timeline-org">Sapienza — Roma</div>
+                <p class="timeline-desc">Ricerca in crittografia avanzata, ZKP e AI applicata. Collaborazione a progetti interdisciplinari su machine learning e sicurezza.</p>
+              </li>
+              <li class="timeline-item">
+                <time class="timeline-date" datetime="2022">2022</time>
+                <div class="timeline-role">Software Engineer Intern</div>
+                <div class="timeline-org">Cisco / Eni</div>
+                <p class="timeline-desc">Sviluppo e analisi di sistemi distribuiti. Sicurezza di rete e infrastrutture enterprise.</p>
+              </li>
+              <li class="timeline-item">
+                <time class="timeline-date" datetime="2021">2021 — 2022</time>
+                <div class="timeline-role">Tesi — Sistema APHRODITE</div>
+                <div class="timeline-org">Sapienza × ISS</div>
+                <p class="timeline-desc">Sviluppo e testing del sistema APHRODITE per la Stazione Spaziale Internazionale. Software safety-critical.</p>
+              </li>
+            </ol>
+          </div>
+          <div>
+            <h3 class="timeline-col-title" style="color:var(--neon2)">FORMAZIONE</h3>
+            <ol class="timeline reveal timeline-blue" aria-label="Formazione accademica">
+              <li class="timeline-item">
+                <time class="timeline-date" datetime="2022">2022 — Presente</time>
+                <div class="timeline-role">MSc Computer Science & AI</div>
+                <div class="timeline-org">Sapienza — Roma</div>
+                <p class="timeline-desc">Machine Learning, Cybersecurity, Crittografia, Sistemi Distribuiti, AI avanzata.</p>
+              </li>
+              <li class="timeline-item">
+                <time class="timeline-date" datetime="2018">2018 — 2022</time>
+                <div class="timeline-role">BSc Ingegneria Informatica</div>
+                <div class="timeline-org">Sapienza — Roma</div>
+                <p class="timeline-desc">Laurea triennale con tesi sul sistema APHRODITE per l'ISS.</p>
+              </li>
+              <li class="timeline-item">
+                <time class="timeline-date" datetime="2018">2018 — 2022</time>
+                <div class="timeline-role">Digital Engineering</div>
+                <div class="timeline-org">Politecnico di Milano × ELIS</div>
+                <p class="timeline-desc">Formazione tecnica avanzata presso il Politecnico e il Liceo Classico Chris Cappell College.</p>
+              </li>
+            </ol>
+          </div>
+        </div>
+      </div>
     </section>
 
-    <!-- Contact Section -->
-    <section id="contact" class="section-padding bg-dark text-white">
-        <div class="container">
-            <h2 class="section-title text-center">Contatti</h2>
-            <div class="row">
-                <div class="col-lg-6 mx-auto text-center">
-                    <p class="lead mb-4">Interessato a collaborare o a saperne di più sui miei progetti?</p>
-                    <div class="contact-info">
-                        <p><i class="fas fa-envelope me-2"></i>danielevalenti06081998@gmail.com</p>
-                        <p><i class="fas fa-phone me-2"></i>+39 351 949 7967</p>
-                        <p><i class="fas fa-map-marker-alt me-2"></i>Roma, Italia</p>
-                    </div>
-                    <div class="social-links mt-4">
-                        <a href="#" class="social-link" title="LinkedIn"><i class="fab fa-linkedin"></i></a>
-                        <a href="#" class="social-link" title="GitHub"><i class="fab fa-github"></i></a>
-                        <a href="#" class="social-link" title="Email"><i class="fas fa-envelope"></i></a>
-                    </div>
-                </div>
-            </div>
+    <!-- AI PLAYGROUND -->
+    <section id="playground" aria-labelledby="playground-heading">
+      <div class="container">
+        <div class="section-header reveal">
+          <span class="section-tag" aria-hidden="true">// 06. ai lab</span>
+          <h2 id="playground-heading" class="section-title">AI <span>Playground</span></h2>
+          <div class="section-line" aria-hidden="true"></div>
+          <p class="section-subtitle">Chiedimi qualcosa su cybersecurity, AI o i miei progetti. Powered by Claude.</p>
         </div>
+        <div class="playground-container reveal" role="region" aria-label="Chat con AI">
+          <div class="playground-header" aria-hidden="true">
+            <div class="pg-dot pg-dot-1"></div>
+            <div class="pg-dot pg-dot-2"></div>
+            <div class="pg-dot pg-dot-3"></div>
+            <span class="pg-title">daniele-ai-assistant.sh</span>
+            <span class="pg-status">online</span>
+          </div>
+          <div class="chat-messages" id="chat-messages" role="log" aria-live="polite" aria-label="Messaggi della chat">
+            <div class="msg ai">
+              <div class="msg-avatar" aria-hidden="true">AI</div>
+              <div class="msg-bubble">
+                Ciao! Sono l'assistente AI di Daniele. Puoi chiedermi dei suoi progetti di <code>cybersecurity</code>, ricerche su <code>crittografia</code>, lavori di <code>machine learning</code>, o qualsiasi altra cosa sul suo percorso. Come posso aiutarti?
+              </div>
+            </div>
+          </div>
+          <div class="pg-suggestions" id="pg-suggestions" aria-label="Domande suggerite">
+            <button class="suggestion-chip">Cosa è APHRODITE?</button>
+            <button class="suggestion-chip">Progetti ML di Daniele</button>
+            <button class="suggestion-chip">Competenze principali</button>
+            <button class="suggestion-chip">Contatti e collaborazioni</button>
+          </div>
+          <div class="chat-input-area">
+            <span class="chat-prompt" aria-hidden="true">~/daniele $</span>
+            <label for="chat-input" class="sr-only">Messaggio</label>
+            <input type="text" class="chat-input" id="chat-input" placeholder="Scrivi un messaggio..." autocomplete="off">
+            <button class="chat-send" id="chat-send" aria-label="Invia messaggio">↵ invia</button>
+          </div>
+        </div>
+      </div>
     </section>
 
-    <!-- Footer -->
-    <footer class="footer">
-        <div class="container">
-            <div class="row">
-                <div class="col-12 text-center">
-                    <p>&copy; 2025 Daniele Valenti. Tutti i diritti riservati.</p>
-                </div>
-            </div>
+    <!-- CONTACT -->
+    <section id="contact" aria-labelledby="contact-heading">
+      <div class="container">
+        <div class="section-header reveal">
+          <span class="section-tag" aria-hidden="true">// 07. contatti</span>
+          <h2 id="contact-heading" class="section-title">Get in <span>Touch</span></h2>
+          <div class="section-line" aria-hidden="true"></div>
         </div>
-    </footer>
+        <div class="contact-grid">
+          <div class="contact-info reveal">
+            <p class="contact-intro">Interessato a collaborare su progetti di AI, cybersecurity o ricerca? Scrivimi!</p>
+            <address>
+              <div class="contact-item">
+                <span class="contact-icon" aria-hidden="true">📧</span>
+                <div>
+                  <div class="contact-detail">email</div>
+                  <div class="contact-val">danielevalenti06081998 [at] gmail.com</div>
+                </div>
+              </div>
+              <div class="contact-item">
+                <span class="contact-icon" aria-hidden="true">📍</span>
+                <div>
+                  <div class="contact-detail">location</div>
+                  <div class="contact-val">Roma, Italia</div>
+                </div>
+              </div>
+              <div class="contact-item">
+                <span class="contact-icon" aria-hidden="true">📱</span>
+                <div>
+                  <div class="contact-detail">phone</div>
+                  <div class="contact-val">+39 351 949 7967</div>
+                </div>
+              </div>
+            </address>
+            <nav class="social-links" aria-label="Profili social">
+              <a href="https://github.com/valens98" class="social-link" target="_blank" rel="noopener noreferrer" aria-label="GitHub di Daniele Valenti">GH</a>
+              <a href="https://www.linkedin.com/in/daniele-valenti" class="social-link" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn di Daniele Valenti">in</a>
+            </nav>
+          </div>
+          <div class="contact-form-wrap reveal">
+            <!-- Per attivare il form, registrati su formspree.io e sostituisci YOUR_ID -->
+            <form class="contact-form" action="https://formspree.io/f/YOUR_ID" method="POST" novalidate>
+              <div class="form-group">
+                <label for="form-name">Nome</label>
+                <input type="text" id="form-name" name="name" placeholder="Il tuo nome" required>
+              </div>
+              <div class="form-group">
+                <label for="form-email">Email</label>
+                <input type="email" id="form-email" name="email" placeholder="tua@email.com" required>
+              </div>
+              <div class="form-group">
+                <label for="form-msg">Messaggio</label>
+                <textarea id="form-msg" name="message" placeholder="Di cosa vorresti parlarmi?" required></textarea>
+              </div>
+              <button type="submit" class="btn">Invia Messaggio</button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
 
-    <!-- Bootstrap JS -->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
-    
-    <!-- Custom JavaScript -->
-    <script src="script.js"></script>
+  </main>
+
+  <!-- FOOTER -->
+  <footer role="contentinfo">
+    <p>© 2025 <span>Daniele Valenti</span> — Built with passion & <span>AI</span></p>
+  </footer>
+
+  <!-- JS — caricamento differito per performance -->
+  <script src="js/data.js"></script>
+  <script src="js/neural.js"></script>
+  <script src="js/ui.js"></script>
+  <script src="js/chat.js"></script>
 </body>
 </html>
+
