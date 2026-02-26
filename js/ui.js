@@ -66,9 +66,18 @@
 /* ── TYPING EFFECT ────────────────────────────────── */
 (function () {
   const el = document.getElementById('typing-text');
-  if (!el || !window.DATA) return;
+  if (!el) return;
 
-  const phrases = DATA.typingPhrases;
+  // Usa DATA.typingPhrases se disponibile, altrimenti fallback inline
+  const phrases = (window.DATA && DATA.typingPhrases) ? DATA.typingPhrases : [
+    'Cybersecurity Engineer',
+    'AI Researcher',
+    'Cryptography Enthusiast',
+    'Machine Learning Developer',
+    'CTF Player',
+    'Space Software Engineer',
+  ];
+
   let pi = 0, ci = 0, deleting = false;
 
   function loop() {
@@ -325,3 +334,4 @@
 
   document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
 })();
+
